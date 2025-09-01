@@ -31,7 +31,7 @@ Clone the repo:
 ```bash
 git clone https://github.com/YOUR_USERNAME/api-endpoint-usage-checker.git
 cd api-endpoint-usage-checker
-
+```
 ---
 ## ▶️ Usage
 
@@ -39,7 +39,7 @@ Run the tool with:
 
 ```bash
 python start.py
-
+```
 This will:  
 1. Create and activate a virtual environment (if missing).  
 2. Install dependencies from `requirements.txt`.  
