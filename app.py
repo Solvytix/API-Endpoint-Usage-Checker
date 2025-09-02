@@ -152,7 +152,7 @@ if endpoint_file and project_dirs_input:
 
     # Filters with counts in labels
     status_filter = st.radio(
-        "Filter by status:",
+        "Filter by Status:",
         [
             f"All ({all_count})",
             f"Used ({used_count})",
@@ -161,14 +161,14 @@ if endpoint_file and project_dirs_input:
         horizontal=True
     )
     if status_filter.startswith("Used"):
-        df = df[df["status"] == "used"]
+        df = df[df["Status"] == "used"]
     elif status_filter.startswith("Unused"):
-        df = df[df["status"] == "unused"]
+        df = df[df["Status"] == "unused"]
 
     # Search box
     search = st.text_input("🔎 Search endpoint")
     if search:
-        df = df[df["endpoint"].str.contains(search, case=False)]
+        df = df[df["Endpoint"].str.contains(search, case=False)]
 
     # Display table
     st.dataframe(df, use_container_width=True)
